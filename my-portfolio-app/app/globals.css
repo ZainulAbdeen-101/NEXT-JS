@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+
+#navContainer {
+display: flex;
+margin-left: 280px;
+
+
+}
+
+
+@media screen and (min-width: 1024px)and (max-width:1200px) {
+   #navContainer  {
+    margin-left: 180px;
+    }
+  }
+
+#navContainer button{
+    position: relative;
+    border: none;
+    background: none;
+}
+
+
+
+#navContainer button::before{
+    content:'';
+    background-color: #FC6B00;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: scale(0, 1);
+    transition: transform 0.25s ease;
+}
+
+#navContainer button:hover::before {
+    transform: scale(1,1);
+
+}
+
+
+
